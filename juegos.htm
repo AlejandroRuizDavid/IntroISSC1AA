@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #666666;
+}
+.style1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+.style2 {font-size: 24px}
+.style5 {color: #990099; font-size: 36px; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body>
+<div id="Layer1" style="position:absolute; left:455px; top:19px; width:254px; height:93px; z-index:1"><b>
+
+<script>
+
+/*
+RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
+Featured on JavaScript Kit
+For this script, visit http://www.javascriptkit.com
+*/
+
+// ********** MAKE YOUR CHANGES HERE
+
+var text="BIENVENIDO A LOS JUEGOS" // YOUR TEXT
+var speed=100 // SPEED OF FADE
+
+// ********** LEAVE THE NEXT BIT ALONE!
+
+
+if (document.all||document.getElementById){
+document.write('<span id="highlight">' + text + '</span>')
+var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
+}
+else
+document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+var r=1
+var g=1
+var b=1
+var seq=1
+function changetext(){
+rainbow="#"+hex[r]+hex[g]+hex[b]
+storetext.style.color=rainbow
+}
+function change(){
+if (seq==6){
+b--
+if (b==0)
+seq=1
+}
+if (seq==5){
+r++
+if (r==12)
+seq=6
+}
+if (seq==4){
+g--
+if (g==0)
+seq=5
+}
+if (seq==3){
+b++
+if (b==12)
+seq=4
+}
+if (seq==2){
+r--
+if (r==0)
+seq=3
+}
+if (seq==1){
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+function starteffect(){
+if (document.all||document.getElementById)
+flash=setInterval("change()",speed)
+}
+starteffect()
+</script>
+</b>
+
+<p align="center">&nbsp;</p>
+</div>
+<div id="Layer2" style="position:absolute; left:20px; top:148px; width:357px; height:200px; z-index:2">
+  <p align="center" class="style1"> <a href="torre.htm" class="style5">Torre de hanoi</a> </p>
+  <p align="center" class="style1">
+    <embed src="torre%20de%20hanoi.gif" width="210" height="141"></embed>
+  </p>
+  <p>&nbsp;</p>
+</div>
+<div id="Layer3" style="position:absolute; left:407px; top:149px; width:352px; height:224px; z-index:3">
+  <div align="center" class="style2">
+    <p><a href="phong.htm" class="style5">Ping Pong</a> </p>
+    <p>
+      <embed src="ping-pong-07.gif" width="207" height="156"></embed>
+    </p>
+  </div>
+</div>
+<div id="Layer4" style="position:absolute; left:798px; top:156px; width:336px; height:227px; z-index:4">
+  <div align="center" class="style2">
+    <p><a href="tictacgame_Even_Smarter_3.htm" class="style5">Gato</a></p>
+    <p>
+      <embed src="tres%20en%20raya.gif" width="197" height="145"></embed>
+    </p>
+  </div>
+</div>
+</body>
+</html>
